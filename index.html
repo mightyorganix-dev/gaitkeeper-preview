@@ -25,10 +25,10 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;ove
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 18px}.chips label{cursor:pointer}.chips input{position:absolute;opacity:0}.chips span{display:inline-block;padding:11px 16px;border-radius:999px;border:1.5px solid #c9d3cc;background:#fff;font-weight:600;transition:.15s}.chips input:checked+span{background:#1f5a3c;color:#fff;border-color:#1f5a3c}.chips input:focus-visible+span{outline:3px solid #e9d48f}
 #out{margin-top:18px;display:none}#out.on{display:block;animation:up .35s ease}@keyframes up{from{opacity:0;transform:translateY(8px)}}
 .cta{text-align:center}.cta .b{min-width:240px}footer{background:#0a1711;color:#9fb0a5;text-align:center;padding:26px 20px;font-size:.88rem}
-.rv{opacity:0;transform:translateY(14px);transition:.6s ease}.rv.in{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(14px);transition:.6s ease}.js .rv.in{opacity:1;transform:none}
 @media(max-width:480px){.hero .b,.cta .b{width:100%}section{padding:52px 0}}
 @media(prefers-reduced-motion:reduce){.hero .bg,.sh{animation:none}.rv{opacity:1;transform:none;transition:none}}
-</style></head><body>
+</style><script>document.documentElement.classList.add("js");setTimeout(function(){document.querySelectorAll(".rv").forEach(function(e){e.classList.add("in")})},2500)</script></head><body>
 <nav><div class="w"><b>Mighty Organix</b><a class="c" href="#walkthrough">Free walkthrough</a></div></nav>
 <header class="hero"><div class="bg" aria-hidden="true"></div><div class="w"><p class="kick">Nashville area · Tennessee · Kentucky · Alabama</p><h1 class="sh">Websites that work as hard as you do.</h1><p class="l">Mighty Organix turns broken, slow and phone-unfriendly websites into fast, simple ones that bring in calls, bookings and customers for local businesses.</p><div class="btns"><a class="b p" href="#walkthrough">Book a free 30-minute walkthrough</a><a class="b o" href="#pricing">See pricing</a></div></div></header>
 
@@ -69,12 +69,12 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;ove
 <p class="note">All figures are estimates within about 40 miles of Nashville. Categories overlap and don't add up to the total.</p></div></section>
 
 <section id="walkthrough" class="dark cta"><div class="w rv"><div class="lab" style="color:#cdb87a">Get started</div><h2>Book your free 30-minute walkthrough</h2><p class="sub" style="margin:0 auto 26px">Call or email and tell me about your business and your website. Serving local businesses across Tennessee, Kentucky and Alabama.</p>
-<div class="btns"><a class="b p" href="tel:+17272077345">Call 727-207-7345</a><a class="b o" href="mailto:mightyorganix@gmail.com?subject=Free%2030-minute%20walkthrough">mightyorganix@gmail.com</a></div></div></section>
-<footer>© 2026 Mighty Organix · Nashville area · <a href="tel:+17272077345">727-207-7345</a> · <a href="mailto:mightyorganix@gmail.com">mightyorganix@gmail.com</a></footer>
+<div class="btns"><a class="b p" href="tel:+17272077345">Call 727-207-7345</a><a class="b o" href="mailto:mightyorganix@gmail.com?subject=Free%2030-minute%20walkthrough">mightyorganix@gmail.com</a><a class="b o" href="mailto:dane@mightyorganix.com?subject=Free%2030-minute%20walkthrough">dane@mightyorganix.com</a></div></div></section>
+<footer>© 2026 Mighty Organix · Nashville area · <a href="tel:+17272077345">727-207-7345</a> · <a href="mailto:mightyorganix@gmail.com">mightyorganix@gmail.com</a> · <a href="mailto:dane@mightyorganix.com">dane@mightyorganix.com</a></footer>
 <script>
 const T={calls:"a tap-to-call button on every page and your number right up top",book:"an online booking or request form that sends straight to your phone",sell:"a simple shop with photos, prices and easy checkout",found:"clear service pages and a Google business profile so locals find you",phone:"a phone-first layout that's easy to read and tap",time:"answers to common questions and forms that cut the back-and-forth",fresh:"a clean, modern look built around your own photos"};
 document.getElementById('pk').onsubmit=e=>{e.preventDefault();const v=[...e.target.querySelectorAll('input:checked')].map(i=>i.value),o=document.getElementById('out');
 let plan=v.length>=4||v.includes('sell')?'<b>Fuller redesign</b> ($2,000–$3,000)':'<b>Lean redesign</b> ($1,500–$2,500)';
 o.innerHTML=v.length?'<h3>My suggestion</h3><p>Your site should have '+v.map(k=>T[k]).join('; ')+'.</p><p style="margin-top:10px">Good fit: '+plan+', plus website care so it keeps working.</p><p style="margin-top:14px"><a class="b g" href="#walkthrough">Talk it through free</a></p>':'<p>Pick at least one goal above.</p>';o.className='card on'};
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+try{const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el))}catch(e){document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'))}
 </script></body></html>
