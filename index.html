@@ -3,9 +3,9 @@
 *{box-sizing:border-box}html,body{margin:0;height:100%}
 body{min-height:100svh;display:grid;place-items:center;overflow:hidden;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#f4f1e8;text-align:center;padding:24px;
 background:radial-gradient(120% 90% at 20% 10%,#2e6b4a 0%,transparent 55%),radial-gradient(100% 80% at 90% 100%,#8a6a2a 0%,transparent 55%),#0d1f17}
-.bg{position:fixed;left:50%;top:50%;width:min(130vw,130vh);aspect-ratio:1;transform:translate(-50%,-50%);background:url(logo-bg.webp) center/contain no-repeat;opacity:.09;animation:spin 140s linear infinite;pointer-events:none}
-@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
-main{position:relative;max-width:640px}
+.bg{position:fixed;left:50%;top:50%;width:min(115vw,105vh);aspect-ratio:1;transform:translate(-50%,-50%);background:url(logo-bg.webp) center/contain no-repeat;opacity:.2;animation:br 8s ease-in-out infinite;pointer-events:none}
+@keyframes br{50%{opacity:.27;transform:translate(-50%,-50%) scale(1.03)}}
+main{position:relative;max-width:640px;padding:28px 20px;border-radius:24px;background:radial-gradient(closest-side,rgba(13,31,23,.65),transparent)}
 .kick{letter-spacing:.3em;text-transform:uppercase;font-size:.75rem;color:#cdb87a;margin:0 0 14px}
 h1{margin:0;font-size:clamp(2.6rem,11vw,5.2rem);line-height:1;letter-spacing:-.03em;font-weight:800;
 background:linear-gradient(100deg,#f4f1e8 30%,#e9d48f 45%,#fff 50%,#e9d48f 55%,#f4f1e8 70%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s ease-in-out infinite}
@@ -18,5 +18,5 @@ p.lead{font-size:clamp(1.05rem,4vw,1.3rem);color:#d9e2da;margin:18px 0 30px}
 @media(max-width:480px){.btns a{width:100%}}
 @media(prefers-reduced-motion:reduce){.bg,h1{animation:none}}
 </style></head><body><div class="bg" aria-hidden="true"></div>
-<main><p class="kick">Nashville area · Tri-state</p><h1>Mighty Organix</h1><p class="lead">Our new site is coming soon.</p>
+<main><p class="kick">Nashville area · Tri-state</p><h1 style="text-shadow:none">Mighty Organix</h1><p class="lead">Our new site is coming soon.</p>
 <div class="btns"><a class="p" href="tel:+17272077345">Call 727-207-7345</a><a class="s" href="mailto:dane.dison@gmail.com">dane.dison@gmail.com</a></div></main></body></html>
