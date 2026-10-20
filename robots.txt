@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /classic.html
+Sitemap: https://mightyorganix.com/sitemap.xml
