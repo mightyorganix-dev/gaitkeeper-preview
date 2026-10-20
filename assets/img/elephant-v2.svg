@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Mighty Organix elephant mark">
+<defs><path id="arc" d="M120 120 m-88 0 a88 88 0 1 1 176 0"/></defs>
+<circle cx="120" cy="120" r="118" fill="#fff"/>
+<circle cx="120" cy="120" r="111" fill="none" stroke="#0a0a0a" stroke-width="3"/>
+<circle cx="120" cy="120" r="104" fill="none" stroke="#0a0a0a" stroke-width="1"/>
+<text font-family="Space Grotesk,Arial,sans-serif" font-weight="700" font-size="15" letter-spacing="4.2" fill="#0a0a0a"><textPath href="#arc" startOffset="50%" text-anchor="middle">MIGHTY ORGANIX</textPath></text>
+<g fill="#0a0a0a">
+<!-- ears -->
+<path d="M96 92 C72 76 46 84 44 112 C42 140 58 160 86 156 C92 140 92 116 96 92Z"/>
+<path d="M144 92 C168 76 194 84 196 112 C198 140 182 160 154 156 C148 140 148 116 144 92Z"/>
+<!-- head + trunk -->
+<path d="M120 70 C98 70 86 86 88 110 C90 128 100 138 108 146 L108 176 C108 190 116 198 126 196 C134 194 138 186 132 180 C128 184 122 183 122 176 L122 150 C138 140 152 128 152 108 C152 86 142 70 120 70Z"/>
+</g>
+<g fill="#fff">
+<!-- ear inner lines --><path d="M88 104 C72 98 58 104 57 118 C56 132 66 142 80 142" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M152 104 C168 98 182 104 183 118 C184 132 174 142 160 142" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<!-- eyes -->
+<path d="M102 104 l10 3 -10 3z"/><path d="M138 104 l-10 3 10 3z"/>
+<!-- forehead geometric mark -->
+<path d="M120 80 l6 9 -6 9 -6 -9z"/>
+<!-- trunk ridges -->
+<rect x="110" y="156" width="10" height="2"/><rect x="110" y="164" width="10" height="2"/><rect x="110" y="172" width="10" height="2"/>
+</g>
+<!-- tusks -->
+<path d="M103 138 C99 152 92 160 80 164 C94 166 104 158 109 146Z" fill="#fff" stroke="#0a0a0a" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M137 138 C141 152 148 160 160 164 C146 166 136 158 131 146Z" fill="#fff" stroke="#0a0a0a" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M120 212 l4 -6 -4 -6 -4 6z" fill="#0a0a0a"/>
+</svg>
