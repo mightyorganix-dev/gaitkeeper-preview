@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /classic.html
 Disallow: /ads/
+Disallow: /backup-2026-11-01/
 Sitemap: https://mightyorganix.com/sitemap.xml

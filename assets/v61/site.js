@@ -1,0 +1,14 @@
+(()=>{const d=document,rm=d.documentElement.classList.contains('rm'),$=(s,r=d)=>r.querySelector(s),$$=(s,r=d)=>[...r.querySelectorAll(s)];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});$$('.reveal').forEach(e=>io.observe(e));
+const art=$('.hero-art');if(art&&!rm){const loop=()=>{art.classList.remove('after');setTimeout(()=>art.classList.add('after'),3600);setTimeout(()=>art.classList.remove('after'),9400)};loop();setInterval(loop,10000)}
+const D={
+farm:{url:'yourfarmstand.com',img:'assets/v61/img/produce.webp',bh:'WELCOME TO OUR FARM!!',bp:['Hours: call for hours','Directions: ask us','[photo not found]','Last updated 2011'],tag:'Open today · 8am–6pm',ah:'Picked this morning.',cta:'Call the stand'},
+salon:{url:'yoursalon.com',img:'assets/v61/img/salon.webp',bh:'Salon Home Page',bp:['Prices: see flyer in shop','To book, call during business hours','Our Specials (2014)','Site under maintenance'],tag:'Booking open · Tue–Sat',ah:'Your chair is ready.',cta:'Book a time'},
+barn:{url:'yourhorsebarn.com',img:'assets/v61/img/stable.webp',bh:'Barn Info Page',bp:['Boarding: inquire','Lessons: inquire','Map.jpg (broken)','Fax us for info'],tag:'Boarding · Lessons',ah:'Good care for good horses.',cta:'Schedule a visit'},
+shop:{url:'yourlocalshop.com',img:'assets/v61/img/shop.webp',bh:'Our Store Online',bp:['Click here to enter','Hours vary','Coupons expired','Best in 800x600'],tag:'Open now · Main Street',ah:'Right down the road.',cta:'Get directions'}};
+const ca=$('#cmpAfter'),cb=$('#cmpBefore'),cu=$('#cmpUrl'),ph=$('#yoursPhoto'),cm=$('#cmp');
+const show=k=>{const v=D[k];if(!v||!ca)return;cu.textContent=v.url;ca.innerHTML=`<div class="n-photo" style="background-image:url(${v.img})"></div><div class="n-body"><p class="n-tag">${v.tag}</p><p class="n-h">${v.ah}</p><div class="n-row"><span class="n-btn">${v.cta}</span><span class="n-btn alt">Call</span></div></div>`;cb.innerHTML=`<h4>${v.bh}</h4>`+v.bp.map(p=>`<p>${p}</p>`).join('');if(ph){ph.style.opacity=0;setTimeout(()=>{ph.style.backgroundImage=`url(${v.img})`;ph.style.opacity=''},300)}};
+$$('.tabs button').forEach(b=>b.addEventListener('click',()=>{$$('.tabs button').forEach(o=>o.setAttribute('aria-selected',o===b));show(b.dataset.k)}));show('farm');
+const rg=$('#cmpRange');if(rg){const set=()=>cm.style.setProperty('--p',rg.value+'%');rg.addEventListener('input',set);set()}
+const ab=$('#audio'),am=$('#amb');if(ab&&am){const st=on=>{ab.setAttribute('aria-pressed',on);ab.textContent='Woodland sounds: '+(on?'on':'off')};st(false);ab.addEventListener('click',()=>{const on=am.paused;if(on){am.volume=.15;am.play().catch(()=>{})}else am.pause();st(on);localStorage.setItem('mo-audio',on?'on':'off')})}
+})();
