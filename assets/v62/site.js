@@ -6,7 +6,7 @@ salon:{url:'Sample design',img:'assets/v62/img/salon.webp',tag:'Booking open · 
 barn:{url:'Sample design',img:'assets/v62/img/stable.webp',tag:'Boarding · Lessons',ah:'Good care for good horses.',cta:'Schedule a visit'},
 shop:{url:'Sample design',img:'assets/v62/img/shop.webp',tag:'Open now · Main Street',ah:'Right down the road.',cta:'Get directions'}};
 const ca=$('#cmpAfter'),cu=$('#cmpUrl'),ph=$('#yoursPhoto'),cm=$('#cmp');
-const show=k=>{const v=D[k];if(!v||!ca)return;cu.textContent=v.url;ca.innerHTML=`<div class="n-photo" style="background-image:url(${v.img})"></div><div class="n-body"><p class="n-tag">${v.tag}</p><p class="n-h">${v.ah}</p><div class="n-row"><span class="n-btn">${v.cta}</span><span class="n-btn alt">Call</span></div></div>`;if(ph){ph.style.opacity=0;setTimeout(()=>{ph.style.backgroundImage=`url(${v.img})`;ph.style.opacity=''},300)}};
+const show=k=>{const v=D[k];if(!v||!ca)return;cu.textContent=v.url;ca.innerHTML=`<div class="n-photo" style="background-image:url(${v.img})"></div>`;if(ph){ph.style.opacity=0;setTimeout(()=>{ph.style.backgroundImage=`url(${v.img})`;ph.style.opacity=''},300)}};
 $$('.tabs button').forEach(b=>b.addEventListener('click',()=>{$$('.tabs button').forEach(o=>o.setAttribute('aria-selected',o===b));show(b.dataset.k)}));show('farm');
 const ab=$('#audio'),am=$('#amb');if(ab&&am){const st=on=>{ab.setAttribute('aria-pressed',on);ab.textContent='Woodland sounds: '+(on?'on':'off')};st(false);ab.addEventListener('click',()=>{const on=am.paused;if(on){am.volume=.15;am.play().catch(()=>{})}else am.pause();st(on);localStorage.setItem('mo-audio',on?'on':'off')})}
 const hd=$("#hdr");if(hd){const f=()=>hd.classList.toggle("scrolled",scrollY>8);addEventListener("scroll",f,{passive:true});f()}
